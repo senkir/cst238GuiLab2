@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EB9290213804963005486B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB9290113804963005486B1 /* Cocoa.framework */; };
+		4EB9290C13804963005486B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EB9290A13804963005486B1 /* InfoPlist.strings */; };
+		4EB9290F13804963005486B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9290E13804963005486B1 /* main.m */; };
+		4EB9291213804963005486B1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB9291013804963005486B1 /* Credits.rtf */; };
+		4EB9291513804963005486B1 /* lab2DasClockAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9291413804963005486B1 /* lab2DasClockAppDelegate.m */; };
+		4EB9291813804963005486B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB9291613804963005486B1 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4EB928FD13804963005486B1 /* lab2DasClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab2DasClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB9290113804963005486B1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4EB9290413804963005486B1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4EB9290513804963005486B1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4EB9290613804963005486B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4EB9290913804963005486B1 /* lab2DasClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "lab2DasClock-Info.plist"; sourceTree = "<group>"; };
+		4EB9290B13804963005486B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4EB9290D13804963005486B1 /* lab2DasClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lab2DasClock-Prefix.pch"; sourceTree = "<group>"; };
+		4EB9290E13804963005486B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4EB9291113804963005486B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4EB9291313804963005486B1 /* lab2DasClockAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lab2DasClockAppDelegate.h; sourceTree = "<group>"; };
+		4EB9291413804963005486B1 /* lab2DasClockAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lab2DasClockAppDelegate.m; sourceTree = "<group>"; };
+		4EB9291713804963005486B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EB928FA13804963005486B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB9290213804963005486B1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EB928F213804962005486B1 = {
+			isa = PBXGroup;
+			children = (
+				4EB9290713804963005486B1 /* lab2DasClock */,
+				4EB9290013804963005486B1 /* Frameworks */,
+				4EB928FE13804963005486B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EB928FE13804963005486B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EB928FD13804963005486B1 /* lab2DasClock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EB9290013804963005486B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EB9290113804963005486B1 /* Cocoa.framework */,
+				4EB9290313804963005486B1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EB9290313804963005486B1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EB9290413804963005486B1 /* AppKit.framework */,
+				4EB9290513804963005486B1 /* CoreData.framework */,
+				4EB9290613804963005486B1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4EB9290713804963005486B1 /* lab2DasClock */ = {
+			isa = PBXGroup;
+			children = (
+				4EB9291313804963005486B1 /* lab2DasClockAppDelegate.h */,
+				4EB9291413804963005486B1 /* lab2DasClockAppDelegate.m */,
+				4EB9291613804963005486B1 /* MainMenu.xib */,
+				4EB9290813804963005486B1 /* Supporting Files */,
+			);
+			path = lab2DasClock;
+			sourceTree = "<group>";
+		};
+		4EB9290813804963005486B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EB9290913804963005486B1 /* lab2DasClock-Info.plist */,
+				4EB9290A13804963005486B1 /* InfoPlist.strings */,
+				4EB9290D13804963005486B1 /* lab2DasClock-Prefix.pch */,
+				4EB9290E13804963005486B1 /* main.m */,
+				4EB9291013804963005486B1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EB928FC13804963005486B1 /* lab2DasClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB9291B13804963005486B1 /* Build configuration list for PBXNativeTarget "lab2DasClock" */;
+			buildPhases = (
+				4EB928F913804963005486B1 /* Sources */,
+				4EB928FA13804963005486B1 /* Frameworks */,
+				4EB928FB13804963005486B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lab2DasClock;
+			productName = lab2DasClock;
+			productReference = 4EB928FD13804963005486B1 /* lab2DasClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EB928F413804962005486B1 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4EB928F713804962005486B1 /* Build configuration list for PBXProject "lab2DasClock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4EB928F213804962005486B1;
+			productRefGroup = 4EB928FE13804963005486B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EB928FC13804963005486B1 /* lab2DasClock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EB928FB13804963005486B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB9290C13804963005486B1 /* InfoPlist.strings in Resources */,
+				4EB9291213804963005486B1 /* Credits.rtf in Resources */,
+				4EB9291813804963005486B1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EB928F913804963005486B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB9290F13804963005486B1 /* main.m in Sources */,
+				4EB9291513804963005486B1 /* lab2DasClockAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4EB9290A13804963005486B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EB9290B13804963005486B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4EB9291013804963005486B1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EB9291113804963005486B1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4EB9291613804963005486B1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EB9291713804963005486B1 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EB9291913804963005486B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4EB9291A13804963005486B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4EB9291C13804963005486B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lab2DasClock/lab2DasClock-Prefix.pch";
+				INFOPLIST_FILE = "lab2DasClock/lab2DasClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4EB9291D13804963005486B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lab2DasClock/lab2DasClock-Prefix.pch";
+				INFOPLIST_FILE = "lab2DasClock/lab2DasClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EB928F713804962005486B1 /* Build configuration list for PBXProject "lab2DasClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB9291913804963005486B1 /* Debug */,
+				4EB9291A13804963005486B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB9291B13804963005486B1 /* Build configuration list for PBXNativeTarget "lab2DasClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB9291C13804963005486B1 /* Debug */,
+				4EB9291D13804963005486B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EB928F413804962005486B1 /* Project object */;
+}
