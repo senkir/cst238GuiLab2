@@ -9,6 +9,9 @@
 #import "lab2DasClockAppDelegate.h"
 #import "OITRootViewController.h"
 #import "OITComboBoxDataSource.h"
+#import "OITDigitalClockController.h"
+
+#define kDigitalClock @"Digital"
 
 @implementation lab2DasClockAppDelegate
 
@@ -35,7 +38,14 @@
     NSInteger index = [_dropdownBox indexOfSelectedItem];
     NSString* result = [_comboBoxDataSource comboBox:_dropdownBox objectValueForItemAtIndex:index];
     NSLog(@"Selected View: %@",result);
-    
+    if ([result isEqualToString:kDigitalClock]) {
+        [self showDigitalClock];
+    }
 }
-
+- (void)showDigitalClock {
+    [_viewController release];
+    _viewController = [[OITDigitalClockController alloc] initWithNibName:@"OITDigitalClockController" bundle:nil];
+    self.view = [_viewController view];
+    NSLog(@"ok that's done");
+}
 @end

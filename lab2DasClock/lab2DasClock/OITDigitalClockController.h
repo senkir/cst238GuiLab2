@@ -7,11 +7,19 @@
 //
 
 #import "OITClockController.h"
+#import "OITTimeModel.h"
 
-
-@interface OITDigitalClockController : OITClockController {
+@interface OITDigitalClockController : OITClockController <OITTimeModelDelegate>{
 @private
+    NSView* _hoursDisplay1;
+    NSView* _hoursDisplay2;
+    NSView* _minutesDisplay1;
+    NSView* _minutesDisplay2;
     
+    NSArray* _displayArray;
 }
-
+@property (nonatomic, retain) IBOutlet NSView *hoursDisplay1;
+@property (nonatomic, retain) IBOutlet NSView *hoursDisplay2;
+@property (nonatomic, retain) IBOutlet NSView *minutesDisplay1;
+@property (nonatomic, retain) IBOutlet NSView *minutesDisplay2;
 @end

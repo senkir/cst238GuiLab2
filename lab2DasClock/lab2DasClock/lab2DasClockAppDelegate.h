@@ -13,6 +13,7 @@
 @private
     NSWindow *window;
     NSView *_view;
+    NSViewController *_viewController;
     NSButton *_submitButton;
     NSComboBox *_dropdownBox;
     id<NSComboBoxDataSource>          _comboBoxDataSource;
@@ -20,10 +21,11 @@
 }
 
 @property (assign) IBOutlet NSWindow *window;
-@property (nonatomic, assign) NSView *view;
+@property (nonatomic, assign) IBOutlet NSView *view;
 
 @property (nonatomic, assign) IBOutlet NSButton *submitButton;
 @property (nonatomic, assign) IBOutlet NSComboBox *dropdownBox;
 
 - (IBAction) submitButtonWasSelected:(id)sender;
+- (void)showDigitalClock;
 @end
