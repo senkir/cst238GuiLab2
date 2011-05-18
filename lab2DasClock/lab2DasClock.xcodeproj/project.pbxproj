@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4E566E0D138389D100451F6F /* OITComboBoxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */; };
+		4E566E151383912F00451F6F /* OITSevenSegmentDigitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E131383912F00451F6F /* OITSevenSegmentDigitController.m */; };
+		4E566E161383912F00451F6F /* OITSevenSegmentDigitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E566E141383912F00451F6F /* OITSevenSegmentDigitController.xib */; };
+		4E566E1A1383926D00451F6F /* OITDigitalClockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E181383926C00451F6F /* OITDigitalClockController.m */; };
+		4E566E1B1383926D00451F6F /* OITDigitalClockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E566E191383926C00451F6F /* OITDigitalClockController.xib */; };
+		4E566E1F1383927F00451F6F /* OITClockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E1D1383927F00451F6F /* OITClockController.m */; };
+		4E566E201383927F00451F6F /* OITClockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E566E1E1383927F00451F6F /* OITClockController.xib */; };
+		4E566E241383945F00451F6F /* OITTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E231383945F00451F6F /* OITTimeModel.m */; };
 		4E8A9063138213500085C6E5 /* OITRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A9061138213500085C6E5 /* OITRootViewController.m */; };
 		4E8A9064138213500085C6E5 /* OITRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8A9062138213500085C6E5 /* OITRootViewController.xib */; };
 		4EB9290213804963005486B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB9290113804963005486B1 /* Cocoa.framework */; };
@@ -21,6 +28,17 @@
 /* Begin PBXFileReference section */
 		4E566E0B138389D100451F6F /* OITComboBoxDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITComboBoxDataSource.h; sourceTree = "<group>"; };
 		4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITComboBoxDataSource.m; sourceTree = "<group>"; };
+		4E566E121383912F00451F6F /* OITSevenSegmentDigitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITSevenSegmentDigitController.h; sourceTree = "<group>"; };
+		4E566E131383912F00451F6F /* OITSevenSegmentDigitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITSevenSegmentDigitController.m; sourceTree = "<group>"; };
+		4E566E141383912F00451F6F /* OITSevenSegmentDigitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OITSevenSegmentDigitController.xib; sourceTree = "<group>"; };
+		4E566E171383926C00451F6F /* OITDigitalClockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITDigitalClockController.h; sourceTree = "<group>"; };
+		4E566E181383926C00451F6F /* OITDigitalClockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITDigitalClockController.m; sourceTree = "<group>"; };
+		4E566E191383926C00451F6F /* OITDigitalClockController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OITDigitalClockController.xib; sourceTree = "<group>"; };
+		4E566E1C1383927F00451F6F /* OITClockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITClockController.h; sourceTree = "<group>"; };
+		4E566E1D1383927F00451F6F /* OITClockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITClockController.m; sourceTree = "<group>"; };
+		4E566E1E1383927F00451F6F /* OITClockController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OITClockController.xib; sourceTree = "<group>"; };
+		4E566E221383945F00451F6F /* OITTimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITTimeModel.h; sourceTree = "<group>"; };
+		4E566E231383945F00451F6F /* OITTimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITTimeModel.m; sourceTree = "<group>"; };
 		4E8A9060138213500085C6E5 /* OITRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITRootViewController.h; sourceTree = "<group>"; };
 		4E8A9061138213500085C6E5 /* OITRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITRootViewController.m; sourceTree = "<group>"; };
 		4E8A9062138213500085C6E5 /* OITRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OITRootViewController.xib; sourceTree = "<group>"; };
@@ -51,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E566E211383928A00451F6F /* Clocks */ = {
+			isa = PBXGroup;
+			children = (
+				4E566E1C1383927F00451F6F /* OITClockController.h */,
+				4E566E1D1383927F00451F6F /* OITClockController.m */,
+				4E566E171383926C00451F6F /* OITDigitalClockController.h */,
+				4E566E181383926C00451F6F /* OITDigitalClockController.m */,
+			);
+			name = Clocks;
+			sourceTree = "<group>";
+		};
 		4E8A905813820E1F0085C6E5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +95,8 @@
 			children = (
 				4E566E0B138389D100451F6F /* OITComboBoxDataSource.h */,
 				4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */,
+				4E566E221383945F00451F6F /* OITTimeModel.h */,
+				4E566E231383945F00451F6F /* OITTimeModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -75,6 +106,9 @@
 			children = (
 				4E8A9060138213500085C6E5 /* OITRootViewController.h */,
 				4E8A9061138213500085C6E5 /* OITRootViewController.m */,
+				4E566E211383928A00451F6F /* Clocks */,
+				4E566E121383912F00451F6F /* OITSevenSegmentDigitController.h */,
+				4E566E131383912F00451F6F /* OITSevenSegmentDigitController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -84,6 +118,9 @@
 			children = (
 				4EB9291613804963005486B1 /* MainMenu.xib */,
 				4E8A9062138213500085C6E5 /* OITRootViewController.xib */,
+				4E566E141383912F00451F6F /* OITSevenSegmentDigitController.xib */,
+				4E566E1E1383927F00451F6F /* OITClockController.xib */,
+				4E566E191383926C00451F6F /* OITDigitalClockController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -198,6 +235,9 @@
 				4EB9291213804963005486B1 /* Credits.rtf in Resources */,
 				4EB9291813804963005486B1 /* MainMenu.xib in Resources */,
 				4E8A9064138213500085C6E5 /* OITRootViewController.xib in Resources */,
+				4E566E161383912F00451F6F /* OITSevenSegmentDigitController.xib in Resources */,
+				4E566E1B1383926D00451F6F /* OITDigitalClockController.xib in Resources */,
+				4E566E201383927F00451F6F /* OITClockController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +252,10 @@
 				4EB9291513804963005486B1 /* lab2DasClockAppDelegate.m in Sources */,
 				4E8A9063138213500085C6E5 /* OITRootViewController.m in Sources */,
 				4E566E0D138389D100451F6F /* OITComboBoxDataSource.m in Sources */,
+				4E566E151383912F00451F6F /* OITSevenSegmentDigitController.m in Sources */,
+				4E566E1A1383926D00451F6F /* OITDigitalClockController.m in Sources */,
+				4E566E1F1383927F00451F6F /* OITClockController.m in Sources */,
+				4E566E241383945F00451F6F /* OITTimeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

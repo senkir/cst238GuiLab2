@@ -21,9 +21,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSLog(@"application did finish launching");
     [self.dropdownBox setUsesDataSource:true];
+    _timeModel = [[OITTimeModel alloc] init];
     _comboBoxDataSource = [[OITComboBoxDataSource alloc] init];
     [self.dropdownBox setDataSource:_comboBoxDataSource];
-    
 }
 
 - (void)dealloc {
@@ -32,6 +32,9 @@
 }
 - (IBAction) submitButtonWasSelected:(id)sender {
     NSLog(@"submit button was selected");
+    NSInteger index = [_dropdownBox indexOfSelectedItem];
+    NSString* result = [_comboBoxDataSource comboBox:_dropdownBox objectValueForItemAtIndex:index];
+    NSLog(@"Selected View: %@",result);
     
 }
 

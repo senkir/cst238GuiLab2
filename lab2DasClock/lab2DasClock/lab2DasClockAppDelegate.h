@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "OITTimeModel.h"
 
 @interface lab2DasClockAppDelegate : NSObject <NSApplicationDelegate> {
 @private
@@ -14,7 +15,8 @@
     NSView *_view;
     NSButton *_submitButton;
     NSComboBox *_dropdownBox;
-    id          _comboBoxDataSource;
+    id<NSComboBoxDataSource>          _comboBoxDataSource;
+    OITTimeModel      *_timeModel;
 }
 
 @property (assign) IBOutlet NSWindow *window;
