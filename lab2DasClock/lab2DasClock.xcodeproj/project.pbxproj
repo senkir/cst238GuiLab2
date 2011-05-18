@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E566E0D138389D100451F6F /* OITComboBoxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */; };
+		4E8A9063138213500085C6E5 /* OITRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A9061138213500085C6E5 /* OITRootViewController.m */; };
+		4E8A9064138213500085C6E5 /* OITRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8A9062138213500085C6E5 /* OITRootViewController.xib */; };
 		4EB9290213804963005486B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB9290113804963005486B1 /* Cocoa.framework */; };
 		4EB9290C13804963005486B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EB9290A13804963005486B1 /* InfoPlist.strings */; };
 		4EB9290F13804963005486B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9290E13804963005486B1 /* main.m */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E566E0B138389D100451F6F /* OITComboBoxDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITComboBoxDataSource.h; sourceTree = "<group>"; };
+		4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITComboBoxDataSource.m; sourceTree = "<group>"; };
+		4E8A9060138213500085C6E5 /* OITRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITRootViewController.h; sourceTree = "<group>"; };
+		4E8A9061138213500085C6E5 /* OITRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITRootViewController.m; sourceTree = "<group>"; };
+		4E8A9062138213500085C6E5 /* OITRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OITRootViewController.xib; sourceTree = "<group>"; };
 		4EB928FD13804963005486B1 /* lab2DasClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab2DasClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB9290113804963005486B1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4EB9290413804963005486B1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -43,6 +51,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E8A905813820E1F0085C6E5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4E8A905C13820E3A0085C6E5 /* View */,
+				4E8A905B13820E330085C6E5 /* Controller */,
+				4E8A905A13820E280085C6E5 /* Model */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4E8A905A13820E280085C6E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E566E0B138389D100451F6F /* OITComboBoxDataSource.h */,
+				4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4E8A905B13820E330085C6E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E8A9060138213500085C6E5 /* OITRootViewController.h */,
+				4E8A9061138213500085C6E5 /* OITRootViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4E8A905C13820E3A0085C6E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EB9291613804963005486B1 /* MainMenu.xib */,
+				4E8A9062138213500085C6E5 /* OITRootViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		4EB928F213804962005486B1 = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +129,7 @@
 			children = (
 				4EB9291313804963005486B1 /* lab2DasClockAppDelegate.h */,
 				4EB9291413804963005486B1 /* lab2DasClockAppDelegate.m */,
-				4EB9291613804963005486B1 /* MainMenu.xib */,
+				4E8A905813820E1F0085C6E5 /* Classes */,
 				4EB9290813804963005486B1 /* Supporting Files */,
 			);
 			path = lab2DasClock;
@@ -152,6 +197,7 @@
 				4EB9290C13804963005486B1 /* InfoPlist.strings in Resources */,
 				4EB9291213804963005486B1 /* Credits.rtf in Resources */,
 				4EB9291813804963005486B1 /* MainMenu.xib in Resources */,
+				4E8A9064138213500085C6E5 /* OITRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +210,8 @@
 			files = (
 				4EB9290F13804963005486B1 /* main.m in Sources */,
 				4EB9291513804963005486B1 /* lab2DasClockAppDelegate.m in Sources */,
+				4E8A9063138213500085C6E5 /* OITRootViewController.m in Sources */,
+				4E566E0D138389D100451F6F /* OITComboBoxDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +326,7 @@
 				4EB9291D13804963005486B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

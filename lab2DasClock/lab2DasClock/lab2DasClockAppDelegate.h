@@ -11,8 +11,17 @@
 @interface lab2DasClockAppDelegate : NSObject <NSApplicationDelegate> {
 @private
     NSWindow *window;
+    NSView *_view;
+    NSButton *_submitButton;
+    NSComboBox *_dropdownBox;
+    id          _comboBoxDataSource;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, assign) NSView *view;
 
+@property (nonatomic, assign) IBOutlet NSButton *submitButton;
+@property (nonatomic, assign) IBOutlet NSComboBox *dropdownBox;
+
+- (IBAction) submitButtonWasSelected:(id)sender;
 @end
