@@ -23,7 +23,8 @@
         _displayArray = [[NSArray alloc] initWithObjects:_hoursDisplay1, _hoursDisplay2,
         _minutesDisplay1, _minutesDisplay2, nil];
     }
-    OITSevenSegmentDigitController *hourController = [[OITSevenSegmentDigitController alloc] initWithNibName:@"OITSevenSegmentDigitController" bundle:nil];                                                  
+    OITSevenSegmentDigitController *hourController = [[OITSevenSegmentDigitController alloc] initWithNibName:@"OITSevenSegmentDigitController" bundle:nil];
+    [self.hoursDisplay1 
     [self setHoursDisplay1:[hourController view]];
     return self;
 }

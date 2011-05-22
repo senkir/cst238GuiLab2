@@ -15,7 +15,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        //
+        NSLog(@"Root view controller");
     }
     
     return self;

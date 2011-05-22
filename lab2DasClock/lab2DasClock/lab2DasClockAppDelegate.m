@@ -43,9 +43,15 @@
     }
 }
 - (void)showDigitalClock {
+    if ([_viewController isKindOfClass:[OITDigitalClockController class]]) return;
     [_viewController release];
+    //remove subviews because we are going to replace them.  
+    NSArray *subviews = [self.view subviews];
+    for (NSView *view in subviews) {
+        [view removeFromSuperview];
+    }
     _viewController = [[OITDigitalClockController alloc] initWithNibName:@"OITDigitalClockController" bundle:nil];
-    self.view = [_viewController view];
+    [self.view addSubview:_viewController.view];
     NSLog(@"ok that's done");
 }
 @end

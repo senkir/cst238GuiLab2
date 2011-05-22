@@ -20,6 +20,9 @@
     NSBox *_segment7;
     
     NSArray *_segments;
+    NSUInteger _value;
+    NSUInteger _maxValue; //restricts the maximum value of this state
+    NSView*    _parent;
 }
 @property (nonatomic, retain) IBOutlet NSBox *segment1;
 @property (nonatomic, retain) IBOutlet NSBox *segment2;
@@ -29,5 +32,9 @@
 @property (nonatomic, retain) IBOutlet NSBox *segment6;
 @property (nonatomic, retain) IBOutlet NSBox *segment7;
 
-- (void)clearDisplay;
+@property (nonatomic, assign) NSUInteger maxValue;
+@property (nonatomic, assign) NSUInteger value;
+
+- (id)initWithParentView:(NSView*)parent;
+- (void)incrementDigit;
 @end

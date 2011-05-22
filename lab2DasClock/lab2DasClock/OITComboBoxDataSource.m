@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        _items = [[NSArray alloc] initWithObjects:@"Digital", @"Analog", @"Other", nil];
+        _items = [[NSArray alloc] initWithObjects:@"Digital", @"Analog", @"Binary", nil];
     }
     
     return self;
