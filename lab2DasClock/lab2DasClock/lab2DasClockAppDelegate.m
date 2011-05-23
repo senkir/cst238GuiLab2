@@ -52,6 +52,7 @@
     }
     _viewController = [[OITDigitalClockController alloc] initWithNibName:@"OITDigitalClockController" bundle:nil];
     [self.view addSubview:_viewController.view];
+    [_timeModel setDelegate:_viewController];
     NSLog(@"ok that's done");
 }
 @end

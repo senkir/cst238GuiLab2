@@ -7,7 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class OITSevenSegmentDigitController;
 
+@protocol OITSevenSegmentDigitDelegate <NSObject>
+- (void)digitDidRollOver:(OITSevenSegmentDigitController*)sender;
+@end
 
 @interface OITSevenSegmentDigitController : NSViewController {
 @private
@@ -23,6 +27,9 @@
     NSUInteger _value;
     NSUInteger _maxValue; //restricts the maximum value of this state
     NSView*    _parent;
+    
+    OITSevenSegmentDigitController* _nextDigit;
+    id<OITSevenSegmentDigitDelegate> _delegate;
 }
 @property (nonatomic, retain) IBOutlet NSBox *segment1;
 @property (nonatomic, retain) IBOutlet NSBox *segment2;
@@ -31,10 +38,14 @@
 @property (nonatomic, retain) IBOutlet NSBox *segment5;
 @property (nonatomic, retain) IBOutlet NSBox *segment6;
 @property (nonatomic, retain) IBOutlet NSBox *segment7;
+@property (nonatomic, retain) NSView* parent;
 
 @property (nonatomic, assign) NSUInteger maxValue;
 @property (nonatomic, assign) NSUInteger value;
+@property (nonatomic, retain) id<OITSevenSegmentDigitDelegate> delegate;
+@property (nonatomic, retain) OITSevenSegmentDigitController* nextDigit;
 
 - (id)initWithParentView:(NSView*)parent;
+- (void)setValue:(NSUInteger)value withOverflow:(bool)overflowEnabled;
 - (void)incrementDigit;
 @end

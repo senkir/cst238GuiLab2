@@ -97,16 +97,15 @@
 					<object class="NSCustomView" id="1034958911">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{323, 124}, {70, 88}}</string>
+						<string key="NSFrame">{{298, 124}, {46, 88}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSClassName">NSView</string>
 					</object>
 					<object class="NSCustomView" id="487065388">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{245, 124}, {70, 88}}</string>
+						<string key="NSFrame">{{250, 124}, {49, 88}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1034958911"/>
@@ -115,7 +114,7 @@
 					<object class="NSCustomView" id="726187607">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{157, 124}, {70, 88}}</string>
+						<string key="NSFrame">{{172, 124}, {54, 88}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="849259987"/>
@@ -124,7 +123,7 @@
 					<object class="NSCustomView" id="1016884623">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{79, 124}, {70, 88}}</string>
+						<string key="NSFrame">{{114, 124}, {58, 88}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="726187607"/>
@@ -154,7 +153,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="1016884623"/>
 					</object>
-					<int key="connectionID">11</int>
+					<int key="connectionID">15</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -162,7 +161,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="726187607"/>
 					</object>
-					<int key="connectionID">12</int>
+					<int key="connectionID">16</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -170,7 +169,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="487065388"/>
 					</object>
-					<int key="connectionID">13</int>
+					<int key="connectionID">17</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -178,7 +177,7 @@
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="1034958911"/>
 					</object>
-					<int key="connectionID">14</int>
+					<int key="connectionID">18</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -212,11 +211,11 @@
 						<reference key="object" ref="1005"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="1016884623"/>
-							<reference ref="726187607"/>
 							<reference ref="487065388"/>
-							<reference ref="1034958911"/>
 							<reference ref="849259987"/>
 							<reference ref="689301059"/>
+							<reference ref="726187607"/>
+							<reference ref="1034958911"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -289,7 +288,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">14</int>
+			<int key="maxID">18</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

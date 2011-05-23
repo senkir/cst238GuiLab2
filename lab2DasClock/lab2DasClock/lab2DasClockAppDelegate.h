@@ -13,7 +13,7 @@
 @private
     NSWindow *window;
     NSView *_view;
-    NSViewController *_viewController;
+    NSViewController<OITTimeModelDelegate> *_viewController;
     NSButton *_submitButton;
     NSComboBox *_dropdownBox;
     id<NSComboBoxDataSource>          _comboBoxDataSource;

@@ -22,17 +22,19 @@
 @synthesize segment5 = _segment5;
 @synthesize segment6 = _segment6;
 @synthesize segment7 = _segment7;
+@synthesize parent = _parent;
 
 @synthesize maxValue = _maxValue;
 @synthesize value = _value;
+
+@synthesize nextDigit = _nextDigit;
+@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _segments = [[NSArray alloc] initWithObjects:_segment1, _segment2, _segment3, 
-                _segment4, _segment5, _segment6, _segment7, nil];
-
+        //extra setup
     }
     
     return self;
@@ -41,8 +43,10 @@
 - (id)initWithParentView:(NSView *)parent {
     self = [super initWithNibName:@"OITSevenSegmentDigitController" bundle:nil];
     if (self) {
-        _parent = [parent retain];
+        [self setParent:parent];
         _value = 0;
+        _maxValue = 9;
+        [self updateDisplay];
     }
     return self;
 }
@@ -56,7 +60,25 @@
     [super dealloc];
 }
 
+- (void)loadView {
+    [super loadView];
+    _segments = [[NSArray alloc] initWithObjects:_segment1, _segment2, _segment3, 
+                 _segment4, _segment5, _segment6, _segment7, nil];
+}
 #pragma mark OITSevenSegmentDigitController
+/**
+ Set the parent view for this digit.  Adds this view as a subview of the parent controller
+ */
+- (void)setParent:(NSView *)parent {
+    if (_parent != parent) {
+        if (_parent) {
+            [self.view removeFromSuperview];
+        }
+        [_parent release];
+        _parent = [parent retain];
+        [parent addSubview:self.view];
+    }
+}
 /**
  Set the maximum value for this digit in terms of its state.
  @params maxValue if greater than 9, becomes 9.
@@ -78,9 +100,21 @@
     }
 }
 
+- (void)setValue:(NSUInteger)value withOverflow:(bool)overflowEnabled {
+    [self setValue:value % _maxValue];
+    if (overflowEnabled) {
+        [self.nextDigit setValue:(value / _maxValue)];
+    }
+}
+
 - (void)incrementDigit {
-    [self setValue:self.value + 1];
-    //todo: notify delegate if this digit rolls over
+    NSUInteger newValue = self.value + 1;
+    if (newValue > _maxValue) {
+        [[self nextDigit] incrementDigit];
+        [self.delegate digitDidRollOver:self];
+        newValue -= _maxValue;
+    }
+    [self setValue:newValue];
     [self updateDisplay];
 }
 
@@ -92,7 +126,7 @@
     [self clearDisplay];
     switch (_value) {
         case 0:
-            displayedSegments = [[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
+            displayedSegments = [[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"5",@"6",@"7", nil];
             break;
         case 1:
             displayedSegments = [[NSArray alloc] initWithObjects:@"3", @"6", nil];
@@ -126,8 +160,8 @@
             break;
     }
     for (NSString* segment in displayedSegments) {
-        [[_segments objectAtIndex:[segment intValue]-1] setTransparent:FALSE];
-    }    
+        [self.view addSubview:[_segments objectAtIndex:[segment intValue]-1]];
+    }
 }
 
 /**
@@ -135,7 +169,7 @@
  */
 - (void)clearDisplay {
     for (NSBox* segment in _segments) {
-        [segment setTransparent:TRUE];
+        [segment removeFromSuperview];
     }
 }
 @end

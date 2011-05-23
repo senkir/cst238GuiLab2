@@ -7,11 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "OITTimeModel.h"
 
-
-@interface OITClockController : NSViewController {
+@interface OITClockController : NSViewController <OITTimeModelDelegate> {
 @private
 }
 
 - (void)updateTime;
+- (void)initializeTime;
 @end

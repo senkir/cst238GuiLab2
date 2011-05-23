@@ -39,7 +39,7 @@
         [_delegate release];
         _delegate = [_delegate retain];
         //rig a timer for the delegate
-        _updateTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(secondsShouldUpdate) userInfo:nil repeats:true];
+        _updateTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeDidChange) userInfo:nil repeats:true];
     }
 }
 
@@ -47,6 +47,9 @@
     _referenceDate = [NSDate date];
     if ([_delegate respondsToSelector:@selector(secondsShouldUpdate:)]) {
         [_delegate secondsShouldUpdate:_referenceDate];
+    } else  if ([_delegate respondsToSelector:@selector(secondsShouldUpdate:)]) {
+        [_delegate minutesShouldUpdate:_referenceDate];
     }
+    //todo f
 }
 @end
