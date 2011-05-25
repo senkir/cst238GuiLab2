@@ -98,6 +98,7 @@
     if (_value  != value) {
         _value = value % _maxValue;
     }
+    [self updateDisplay];
 }
 
 - (void)setValue:(NSUInteger)value withOverflow:(bool)overflowEnabled {

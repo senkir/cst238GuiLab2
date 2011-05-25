@@ -7,6 +7,7 @@
 //
 
 #import "OITDigitalClockController.h"
+#import "OITDigitalNumberSet.h"
 
 @implementation OITDigitalClockController
 
@@ -43,15 +44,12 @@
         [viewControllers addObject:viewController];
         [viewController release];
     }
+    OITDigitalNumberSet* hoursSet = [[OITDigitalNumberSet alloc] initWithDisplay:[NSArray arrayWithObjects:[viewControllers objectAtIndex:0], [viewControllers objectAtIndex:1], nil]];
+    OITDigitalNumberSet* minutesSet = [[OITDigitalNumberSet alloc] initWithDisplay:[NSArray arrayWithObjects:[viewControllers objectAtIndex:1], [viewControllers objectAtIndex:2], nil]];
+    [viewControllers release];
+    viewControllers = [NSArray arrayWithObjects:hoursSet, minutesSet, nil];
     _controllersArray = [viewControllers copy];
     [viewControllers release];
-    for (int i = [_controllersArray count] - 1 ; i > 0; i--) {
-        if (i > 0) {
-            [[_controllersArray objectAtIndex:i] setNextDigit:[_controllersArray objectAtIndex:i-1]];
-        }
-    }
-    [[_controllersArray objectAtIndex:0] setMaxValue:1];
-    [[_controllersArray objectAtIndex:3] setMaxValue:5];
     [self initializeTime];
     NSLog(@"OITDigitalClockController: clock controller is now set up");
 }
@@ -64,22 +62,19 @@
     NSCalendar* currentCalendar = [NSCalendar currentCalendar];
     NSDateComponents* timeComponents = [currentCalendar components:NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:[NSDate date]];
     NSInteger hourComponent = [timeComponents hour];
-    [[_controllersArray objectAtIndex:1] setValue:hourComponent withOverflow:YES];
+    [(OITDigitalNumberSet*)[_controllersArray objectAtIndex:0] setMaxValue:12];
+    [(OITDigitalNumberSet*)[_controllersArray objectAtIndex:0] setValue:hourComponent];
+    
     NSUInteger minuteComponent = [timeComponents minute];
-    [[_controllersArray objectAtIndex:3] setValue:minuteComponent withOverflow:YES];
-    NSLog(@"OITDigitalClockController: time set to %d %d : %d %d", (int)[[_controllersArray objectAtIndex:0] value],
-          (int)[[_controllersArray objectAtIndex:1] value], (int)[[_controllersArray objectAtIndex:2] value], (int)[[_controllersArray objectAtIndex:3] value]);
+    [(OITDigitalNumberSet*)[_controllersArray objectAtIndex:1] setValue:minuteComponent];
+    NSLog(@"OITDigitalClockController: time set to %d : %d", (int)[[_controllersArray objectAtIndex:0] value],
+          (int)[[_controllersArray objectAtIndex:1] value]);
 }
 
 - (void)digitDidRollOver:(OITSevenSegmentDigitController *)sender {
     //check if the rolled over digit was the second hours digit
     if ([_controllersArray objectAtIndex:1] == sender) {
-        OITSevenSegmentDigitController* digitController = [_controllersArray objectAtIndex:1];
-        if ([digitController maxValue] == 10) {
-            [digitController setMaxValue:2];
-        } else {
-            [digitController setMaxValue:10];
-        }
+        [[_controllersArray objectAtIndex:0] incrementDigit];
     }  
 }
 

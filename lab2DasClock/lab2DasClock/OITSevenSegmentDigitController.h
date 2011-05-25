@@ -10,7 +10,7 @@
 @class OITSevenSegmentDigitController;
 
 @protocol OITSevenSegmentDigitDelegate <NSObject>
-- (void)digitDidRollOver:(OITSevenSegmentDigitController*)sender;
+- (void)digitDidRollOver:(id)sender;
 @end
 
 @interface OITSevenSegmentDigitController : NSViewController {

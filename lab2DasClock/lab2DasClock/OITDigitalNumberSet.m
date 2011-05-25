@@ -37,7 +37,7 @@
             return nil;
         }
     }
-    _digitControllerArray = digitControllerArray;
+    _digitControllerArray = [digitControllerArray retain];;
     [[_digitControllerArray objectAtIndex:1] setNextDigit:[_digitControllerArray objectAtIndex:0]];
     [[_digitControllerArray objectAtIndex:0] setDelegate:self];
     _maxValue = 59;
@@ -47,6 +47,8 @@
 
 - (void)dealloc
 {
+    [_digitControllerArray release];
+    _digitControllerArray = nil;
     [_delegate release];
     _delegate = nil;
     [super dealloc];
@@ -55,6 +57,7 @@
 - (void)setValue:(NSUInteger)value {
     if ( value != _value ) {
         if (value > _maxValue) value = _maxValue;
+        _value = value;
         NSUInteger tensDigit = value % 10;
         [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:0] setValue:tensDigit];
         NSUInteger onesDigit = round(value / 10);
@@ -64,6 +67,7 @@
 
 - (void)setMaxValue:(NSUInteger)maxValue {
     if ( maxValue != _maxValue ) {
+        _maxValue = maxValue;
         NSUInteger tensDigit = maxValue % 10;
         [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:0] setMaxValue:tensDigit];
         NSUInteger onesDigit = round(maxValue / 10);
@@ -78,7 +82,7 @@
 
 - (void)digitDidRollOver:(OITSevenSegmentDigitController *)sender {
     if ( _delegate != nil ) {
-        [_delegate digitDidRollOver:sender];
+        [_delegate digitDidRollOver:self];
     }
 }
 @end
