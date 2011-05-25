@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E464C2D138D69D700DBC9AA /* clock_seconds.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E464C2A138D69D700DBC9AA /* clock_seconds.png */; };
+		4E464C2E138D69D700DBC9AA /* clock_minute.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E464C2B138D69D700DBC9AA /* clock_minute.png */; };
+		4E464C2F138D69D700DBC9AA /* clock_hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E464C2C138D69D700DBC9AA /* clock_hour.png */; };
 		4E566E0D138389D100451F6F /* OITComboBoxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */; };
 		4E566E151383912F00451F6F /* OITSevenSegmentDigitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E131383912F00451F6F /* OITSevenSegmentDigitController.m */; };
 		4E566E161383912F00451F6F /* OITSevenSegmentDigitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E566E141383912F00451F6F /* OITSevenSegmentDigitController.xib */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E464C2A138D69D700DBC9AA /* clock_seconds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_seconds.png; sourceTree = "<group>"; };
+		4E464C2B138D69D700DBC9AA /* clock_minute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_minute.png; sourceTree = "<group>"; };
+		4E464C2C138D69D700DBC9AA /* clock_hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_hour.png; sourceTree = "<group>"; };
 		4E566E0B138389D100451F6F /* OITComboBoxDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITComboBoxDataSource.h; sourceTree = "<group>"; };
 		4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITComboBoxDataSource.m; sourceTree = "<group>"; };
 		4E566E121383912F00451F6F /* OITSevenSegmentDigitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITSevenSegmentDigitController.h; sourceTree = "<group>"; };
@@ -184,6 +190,9 @@
 		4EB9290813804963005486B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E464C2A138D69D700DBC9AA /* clock_seconds.png */,
+				4E464C2B138D69D700DBC9AA /* clock_minute.png */,
+				4E464C2C138D69D700DBC9AA /* clock_hour.png */,
 				4EE4A7E5138CFD1E00A228ED /* clock_bg.png */,
 				4EB9290913804963005486B1 /* lab2DasClock-Info.plist */,
 				4EB9290A13804963005486B1 /* InfoPlist.strings */,
@@ -272,6 +281,9 @@
 				4E566E201383927F00451F6F /* OITClockController.xib in Resources */,
 				4EE4A7E4138CF5C300A228ED /* OITAnalogClockController.xib in Resources */,
 				4EE4A7E6138CFD1E00A228ED /* clock_bg.png in Resources */,
+				4E464C2D138D69D700DBC9AA /* clock_seconds.png in Resources */,
+				4E464C2E138D69D700DBC9AA /* clock_minute.png in Resources */,
+				4E464C2F138D69D700DBC9AA /* clock_hour.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

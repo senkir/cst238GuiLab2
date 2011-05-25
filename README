@@ -16,3 +16,11 @@ Going off of the original UML diagram, I know I need to go into more detail.  Fo
 Speaking of which, positioning the segments in the digital display is going to be a real pain if i do it programatically.  I'd better try to build them with a nib and IBOutlet controls.  This seems the most efficient way to get this working.  
 
 Views are giving me trouble again.  I seem to not be able to refresh the mainMenu view like I did in the previous lab.  Somewhere along the line i think I'm setting the controllers improperly.  Hopefully this will be resolved soon.  I'm reunning out of time and I really want to at least have the digital clock working.  
+
+The digital clock took a lot longer than i thought it would.  Views are very tempramental when it comes to swapping out their contents.  
+
+The analog clock is theoretically going to be easier since i have all the timers wired up already.  The timeModel should technically be a singleton but I don't think i have time to add that functionality at this point.  I made several png images to use as the various features of the clock.  this seemed to make more sense than programatically drawing lines again.  
+
+Inserting images doesn't seem too difficult, since you can add images to the bundle and then call them through [NSImage imageNamed:]
+
+

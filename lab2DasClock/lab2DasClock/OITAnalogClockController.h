@@ -16,8 +16,8 @@
     NSImageView *_hoursHand;
 }
 @property (nonatomic, retain) IBOutlet NSImageView *clockBody;
-@property (nonatomic, retain) IBOutlet NSImageView *secondsHand;
-@property (nonatomic, retain) IBOutlet NSImageView *minutesHand;
-@property (nonatomic, retain) IBOutlet NSImageView *hoursHand;
+//@property (nonatomic, retain) IBOutlet NSImageView *secondsHand;
+//@property (nonatomic, retain) IBOutlet NSImageView *minutesHand;
+//@property (nonatomic, retain) IBOutlet NSImageView *hoursHand;
 
 @end
