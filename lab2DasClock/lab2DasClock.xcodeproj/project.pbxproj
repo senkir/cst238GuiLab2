@@ -23,6 +23,7 @@
 		4EB9291213804963005486B1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB9291013804963005486B1 /* Credits.rtf */; };
 		4EB9291513804963005486B1 /* lab2DasClockAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9291413804963005486B1 /* lab2DasClockAppDelegate.m */; };
 		4EB9291813804963005486B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB9291613804963005486B1 /* MainMenu.xib */; };
+		4EE4A7DC138CD7F200A228ED /* OITDigitalNumberSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4A7DB138CD7F200A228ED /* OITDigitalNumberSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		4EB9291313804963005486B1 /* lab2DasClockAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lab2DasClockAppDelegate.h; sourceTree = "<group>"; };
 		4EB9291413804963005486B1 /* lab2DasClockAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lab2DasClockAppDelegate.m; sourceTree = "<group>"; };
 		4EB9291713804963005486B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4EE4A7DA138CD7F200A228ED /* OITDigitalNumberSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITDigitalNumberSet.h; sourceTree = "<group>"; };
+		4EE4A7DB138CD7F200A228ED /* OITDigitalNumberSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITDigitalNumberSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				4E8A9060138213500085C6E5 /* OITRootViewController.h */,
 				4E8A9061138213500085C6E5 /* OITRootViewController.m */,
 				4E566E211383928A00451F6F /* Clocks */,
+				4EE4A7DA138CD7F200A228ED /* OITDigitalNumberSet.h */,
+				4EE4A7DB138CD7F200A228ED /* OITDigitalNumberSet.m */,
 				4E566E121383912F00451F6F /* OITSevenSegmentDigitController.h */,
 				4E566E131383912F00451F6F /* OITSevenSegmentDigitController.m */,
 			);
@@ -256,6 +261,7 @@
 				4E566E1A1383926D00451F6F /* OITDigitalClockController.m in Sources */,
 				4E566E1F1383927F00451F6F /* OITClockController.m in Sources */,
 				4E566E241383945F00451F6F /* OITTimeModel.m in Sources */,
+				4EE4A7DC138CD7F200A228ED /* OITDigitalNumberSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

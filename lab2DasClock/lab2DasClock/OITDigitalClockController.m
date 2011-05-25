@@ -75,10 +75,10 @@
     //check if the rolled over digit was the second hours digit
     if ([_controllersArray objectAtIndex:1] == sender) {
         OITSevenSegmentDigitController* digitController = [_controllersArray objectAtIndex:1];
-        if ([digitController maxValue] == 9) {
+        if ([digitController maxValue] == 10) {
             [digitController setMaxValue:2];
         } else {
-            [digitController setMaxValue:9];
+            [digitController setMaxValue:10];
         }
     }  
 }
