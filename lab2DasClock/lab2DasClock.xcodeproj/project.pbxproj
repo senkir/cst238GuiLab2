@@ -10,6 +10,8 @@
 		4E464C2D138D69D700DBC9AA /* clock_seconds.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E464C2A138D69D700DBC9AA /* clock_seconds.png */; };
 		4E464C2E138D69D700DBC9AA /* clock_minute.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E464C2B138D69D700DBC9AA /* clock_minute.png */; };
 		4E464C2F138D69D700DBC9AA /* clock_hour.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E464C2C138D69D700DBC9AA /* clock_hour.png */; };
+		4E464C33138D707200DBC9AA /* OITClockAnalogHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E464C32138D707200DBC9AA /* OITClockAnalogHand.m */; };
+		4E464C37138D716A00DBC9AA /* OITAbstractClockElementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E464C35138D716900DBC9AA /* OITAbstractClockElementController.m */; };
 		4E566E0D138389D100451F6F /* OITComboBoxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */; };
 		4E566E151383912F00451F6F /* OITSevenSegmentDigitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E566E131383912F00451F6F /* OITSevenSegmentDigitController.m */; };
 		4E566E161383912F00451F6F /* OITSevenSegmentDigitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E566E141383912F00451F6F /* OITSevenSegmentDigitController.xib */; };
@@ -36,6 +38,10 @@
 		4E464C2A138D69D700DBC9AA /* clock_seconds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_seconds.png; sourceTree = "<group>"; };
 		4E464C2B138D69D700DBC9AA /* clock_minute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_minute.png; sourceTree = "<group>"; };
 		4E464C2C138D69D700DBC9AA /* clock_hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_hour.png; sourceTree = "<group>"; };
+		4E464C31138D707200DBC9AA /* OITClockAnalogHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITClockAnalogHand.h; sourceTree = "<group>"; };
+		4E464C32138D707200DBC9AA /* OITClockAnalogHand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITClockAnalogHand.m; sourceTree = "<group>"; };
+		4E464C34138D716900DBC9AA /* OITAbstractClockElementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITAbstractClockElementController.h; sourceTree = "<group>"; };
+		4E464C35138D716900DBC9AA /* OITAbstractClockElementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITAbstractClockElementController.m; sourceTree = "<group>"; };
 		4E566E0B138389D100451F6F /* OITComboBoxDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITComboBoxDataSource.h; sourceTree = "<group>"; };
 		4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITComboBoxDataSource.m; sourceTree = "<group>"; };
 		4E566E121383912F00451F6F /* OITSevenSegmentDigitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITSevenSegmentDigitController.h; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 			children = (
 				4E566E1C1383927F00451F6F /* OITClockController.h */,
 				4E566E1D1383927F00451F6F /* OITClockController.m */,
+				4E464C34138D716900DBC9AA /* OITAbstractClockElementController.h */,
+				4E464C35138D716900DBC9AA /* OITAbstractClockElementController.m */,
 				4EE4A7DF138CF59000A228ED /* AnalogControllers */,
 				4EE4A7DE138CF56B00A228ED /* DigitalControllers */,
 			);
@@ -221,6 +229,8 @@
 			children = (
 				4EE4A7E0138CF5C300A228ED /* OITAnalogClockController.h */,
 				4EE4A7E1138CF5C300A228ED /* OITAnalogClockController.m */,
+				4E464C31138D707200DBC9AA /* OITClockAnalogHand.h */,
+				4E464C32138D707200DBC9AA /* OITClockAnalogHand.m */,
 			);
 			name = AnalogControllers;
 			sourceTree = "<group>";
@@ -304,6 +314,8 @@
 				4E566E241383945F00451F6F /* OITTimeModel.m in Sources */,
 				4EE4A7DC138CD7F200A228ED /* OITDigitalNumberSet.m in Sources */,
 				4EE4A7E3138CF5C300A228ED /* OITAnalogClockController.m in Sources */,
+				4E464C33138D707200DBC9AA /* OITClockAnalogHand.m in Sources */,
+				4E464C37138D716A00DBC9AA /* OITAbstractClockElementController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
