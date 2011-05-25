@@ -24,6 +24,8 @@
 		4EB9291513804963005486B1 /* lab2DasClockAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9291413804963005486B1 /* lab2DasClockAppDelegate.m */; };
 		4EB9291813804963005486B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB9291613804963005486B1 /* MainMenu.xib */; };
 		4EE4A7DC138CD7F200A228ED /* OITDigitalNumberSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4A7DB138CD7F200A228ED /* OITDigitalNumberSet.m */; };
+		4EE4A7E3138CF5C300A228ED /* OITAnalogClockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4A7E1138CF5C300A228ED /* OITAnalogClockController.m */; };
+		4EE4A7E4138CF5C300A228ED /* OITAnalogClockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4A7E2138CF5C300A228ED /* OITAnalogClockController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,9 @@
 		4EB9291713804963005486B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4EE4A7DA138CD7F200A228ED /* OITDigitalNumberSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITDigitalNumberSet.h; sourceTree = "<group>"; };
 		4EE4A7DB138CD7F200A228ED /* OITDigitalNumberSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITDigitalNumberSet.m; sourceTree = "<group>"; };
+		4EE4A7E0138CF5C300A228ED /* OITAnalogClockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITAnalogClockController.h; sourceTree = "<group>"; };
+		4EE4A7E1138CF5C300A228ED /* OITAnalogClockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITAnalogClockController.m; sourceTree = "<group>"; };
+		4EE4A7E2138CF5C300A228ED /* OITAnalogClockController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OITAnalogClockController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +82,8 @@
 			children = (
 				4E566E1C1383927F00451F6F /* OITClockController.h */,
 				4E566E1D1383927F00451F6F /* OITClockController.m */,
-				4E566E171383926C00451F6F /* OITDigitalClockController.h */,
-				4E566E181383926C00451F6F /* OITDigitalClockController.m */,
+				4EE4A7DF138CF59000A228ED /* AnalogControllers */,
+				4EE4A7DE138CF56B00A228ED /* DigitalControllers */,
 			);
 			name = Clocks;
 			sourceTree = "<group>";
@@ -110,10 +115,6 @@
 				4E8A9060138213500085C6E5 /* OITRootViewController.h */,
 				4E8A9061138213500085C6E5 /* OITRootViewController.m */,
 				4E566E211383928A00451F6F /* Clocks */,
-				4EE4A7DA138CD7F200A228ED /* OITDigitalNumberSet.h */,
-				4EE4A7DB138CD7F200A228ED /* OITDigitalNumberSet.m */,
-				4E566E121383912F00451F6F /* OITSevenSegmentDigitController.h */,
-				4E566E131383912F00451F6F /* OITSevenSegmentDigitController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -126,6 +127,7 @@
 				4E566E141383912F00451F6F /* OITSevenSegmentDigitController.xib */,
 				4E566E1E1383927F00451F6F /* OITClockController.xib */,
 				4E566E191383926C00451F6F /* OITDigitalClockController.xib */,
+				4EE4A7E2138CF5C300A228ED /* OITAnalogClockController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -189,6 +191,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4EE4A7DE138CF56B00A228ED /* DigitalControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E566E171383926C00451F6F /* OITDigitalClockController.h */,
+				4E566E181383926C00451F6F /* OITDigitalClockController.m */,
+				4E566E121383912F00451F6F /* OITSevenSegmentDigitController.h */,
+				4E566E131383912F00451F6F /* OITSevenSegmentDigitController.m */,
+				4EE4A7DA138CD7F200A228ED /* OITDigitalNumberSet.h */,
+				4EE4A7DB138CD7F200A228ED /* OITDigitalNumberSet.m */,
+			);
+			name = DigitalControllers;
+			sourceTree = "<group>";
+		};
+		4EE4A7DF138CF59000A228ED /* AnalogControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4A7E0138CF5C300A228ED /* OITAnalogClockController.h */,
+				4EE4A7E1138CF5C300A228ED /* OITAnalogClockController.m */,
+			);
+			name = AnalogControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,6 +267,7 @@
 				4E566E161383912F00451F6F /* OITSevenSegmentDigitController.xib in Resources */,
 				4E566E1B1383926D00451F6F /* OITDigitalClockController.xib in Resources */,
 				4E566E201383927F00451F6F /* OITClockController.xib in Resources */,
+				4EE4A7E4138CF5C300A228ED /* OITAnalogClockController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +287,7 @@
 				4E566E1F1383927F00451F6F /* OITClockController.m in Sources */,
 				4E566E241383945F00451F6F /* OITTimeModel.m in Sources */,
 				4EE4A7DC138CD7F200A228ED /* OITDigitalNumberSet.m in Sources */,
+				4EE4A7E3138CF5C300A228ED /* OITAnalogClockController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
