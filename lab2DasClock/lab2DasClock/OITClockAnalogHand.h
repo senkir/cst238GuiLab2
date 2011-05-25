@@ -12,5 +12,7 @@
 @private
     NSImageView *_handImageView;
 }
-
+- (id)initWithImageView:(NSImageView*) imageView;
+- (void)rotateByDegrees:(NSUInteger) degrees;
+- (NSImageView*)image;
 @end

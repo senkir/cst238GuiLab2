@@ -29,6 +29,20 @@
     [super dealloc];
 }
 
+/**
+ Set the current value of this digit to something specific.
+ Value will be modded based on maximum for this digit.
+ */
+- (void)setValue:(NSUInteger)value {
+    if (_value  != value) {
+        if ( value > _maxValue ) {
+            _value = round(value / _maxValue);
+        }
+        _value = value;
+    }
+    [self updateDisplay];
+}
+
 - (void)incrementDigit {
     //default does nothing
 }
