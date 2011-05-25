@@ -7,9 +7,6 @@ Discovery:
 I will have to make extensive use of the MVC pattern to swap out views and satisfy the requirements of this lab.  A clock consists of a driver for the time, On top of this the form of the clock has many attributes.  The standard seven segment display of a digital clock is repeated four times, once for each digit.  This will have to be implemented as its own class.  In addition, the actual clock controller will have to talk to a controller for the view object.  
 
 
-Analysis:
-
-
 Documentation:
 Going off of the original UML diagram, I know I need to go into more detail.  For instance, the seven segment display should be broken up into components, with controllers and views for each segment, which are then controlled by the main driver for the clock type.  
 
@@ -23,4 +20,8 @@ The analog clock is theoretically going to be easier since i have all the timers
 
 Inserting images doesn't seem too difficult, since you can add images to the bundle and then call them through [NSImage imageNamed:]
 
+It is very important that view setup is done in the LoadView method because any links to nib objects are not made until after this method is called.  this was causing all sorts of issues when I was first rigging my controllers.  
 
+CGAffinetransformations are insane.  The actual rotation part seems like it's doing what it's supposed to but the images aren't updating the display.  If i try to remove and re-add the subview, the image goes nowhere, which is pretty irritating.  I don't think I should have to do that since the imageView isn't changing, just the image underneath it all.  
+
+There must be a problem with my calculations.  I should look at the value i'm passing in for my rotation angle.  
