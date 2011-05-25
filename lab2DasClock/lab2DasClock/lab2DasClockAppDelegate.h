@@ -28,4 +28,5 @@
 
 - (IBAction) submitButtonWasSelected:(id)sender;
 - (void)showDigitalClock;
+- (void)showAnalogClock;
 @end

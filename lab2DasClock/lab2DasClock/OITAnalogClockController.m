@@ -30,4 +30,24 @@
     [super dealloc];
 }
 
+- (void)loadView {
+    [super loadView];
+    NSLog(@"OITAnalogClockController: setting up the clock display.");
+    NSImage* clockImage = [NSImage imageNamed: @"clock_bg.png"];
+    [_clockBody setImage:clockImage];
+}
+
+- (void)secondsShouldUpdate:(NSDate *)timeStamp {
+    NSLog(@"OITAnalogClockController:  received notice that time should update");
+    [self updateTime];
+}
+
+- (void)minutesShouldUpdate:(NSDate *)timeStamp {
+    NSLog(@"OITAnalogClockController:  received notice that time should update");
+    [self updateTime];
+}
+
+- (void)updateTime {
+    NSLog(@"OITAnalogClockController: updateTime");
+}
 @end

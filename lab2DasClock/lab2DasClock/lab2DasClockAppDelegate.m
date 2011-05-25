@@ -10,8 +10,10 @@
 #import "OITRootViewController.h"
 #import "OITComboBoxDataSource.h"
 #import "OITDigitalClockController.h"
+#import "OITAnalogClockController.h"
 
 #define kDigitalClock @"Digital"
+#define kAnalogClock @"Analog"
 
 @implementation lab2DasClockAppDelegate
 
@@ -40,6 +42,8 @@
     NSLog(@"Selected View: %@",result);
     if ([result isEqualToString:kDigitalClock]) {
         [self showDigitalClock];
+    } else if ([result isEqualToString:kAnalogClock]){
+        [self showAnalogClock];
     }
 }
 - (void)showDigitalClock {
@@ -51,6 +55,20 @@
         [view removeFromSuperview];
     }
     _viewController = [[OITDigitalClockController alloc] initWithNibName:@"OITDigitalClockController" bundle:nil];
+    [self.view addSubview:_viewController.view];
+    [_timeModel setDelegate:_viewController];
+    NSLog(@"ok that's done");
+}
+
+- (void)showAnalogClock {
+    if ([_viewController isKindOfClass:[OITAnalogClockController class]]) return;
+    [_viewController release];
+    //remove subviews because we are going to replace them.  
+    NSArray *subviews = [self.view subviews];
+    for (NSView *view in subviews) {
+        [view removeFromSuperview];
+    }
+    _viewController = [[OITAnalogClockController alloc] initWithNibName:@"OITAnalogClockController" bundle:nil];
     [self.view addSubview:_viewController.view];
     [_timeModel setDelegate:_viewController];
     NSLog(@"ok that's done");
