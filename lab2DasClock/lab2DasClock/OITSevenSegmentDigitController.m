@@ -96,7 +96,10 @@
  */
 - (void)setValue:(NSUInteger)value {
     if (_value  != value) {
-        _value = value % _maxValue;
+        if ( value > _maxValue ) {
+            _value = round(value / _maxValue);
+        }
+        _value = value;
     }
     [self updateDisplay];
 }
@@ -104,16 +107,16 @@
 - (void)setValue:(NSUInteger)value withOverflow:(bool)overflowEnabled {
     [self setValue:value % _maxValue];
     if (overflowEnabled) {
-        [self.nextDigit setValue:(value / _maxValue)];
+        [self.nextDigit setValue:(value % _maxValue)];
     }
 }
 
 - (void)incrementDigit {
     NSUInteger newValue = self.value + 1;
-    if (newValue > _maxValue) {
+    if (newValue >= _maxValue) {
         [[self nextDigit] incrementDigit];
         [self.delegate digitDidRollOver:self];
-        newValue -= _maxValue;
+        newValue = 0;
     }
     [self setValue:newValue];
     [self updateDisplay];

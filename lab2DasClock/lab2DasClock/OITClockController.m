@@ -33,7 +33,4 @@
     NSLog(@"Root interface does nothing");
 }
 
-//- (void)secondsShouldUpdate:(NSDate*)timeStamp {
-//    NSLog(@"Root interface does nothing");
-//}
 @end

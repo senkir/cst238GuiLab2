@@ -27,7 +27,8 @@
 @private
     NSDate *_referenceDate;
     id<OITTimeModelDelegate> _delegate;
-    NSTimer* _updateTimer;
+    NSTimer* _secondTimer;
+    NSTimer* _minuteTimer;
 }
 @property (nonatomic, assign) NSDate *referenceDate;
 @property (nonatomic, retain) id<OITTimeModelDelegate> delegate;

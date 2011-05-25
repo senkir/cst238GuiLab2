@@ -58,20 +58,20 @@
     if ( value != _value ) {
         if (value > _maxValue) value = _maxValue;
         _value = value;
-        NSUInteger tensDigit = value % 10;
+        NSUInteger tensDigit = round(value / 10);
         [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:0] setValue:tensDigit];
-        NSUInteger onesDigit = round(value / 10);
-        [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:0] setValue:onesDigit];
+        NSUInteger onesDigit = value % 10;
+        [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:1] setValue:onesDigit];
     }
 }
 
 - (void)setMaxValue:(NSUInteger)maxValue {
     if ( maxValue != _maxValue ) {
         _maxValue = maxValue;
-        NSUInteger tensDigit = maxValue % 10;
+        NSUInteger tensDigit = round (maxValue / 10);
         [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:0] setMaxValue:tensDigit];
-        NSUInteger onesDigit = round(maxValue / 10);
-        [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:0] setMaxValue:onesDigit];
+        NSUInteger onesDigit = maxValue % 10;
+        [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:1] setMaxValue:onesDigit];
     }
 }
 
