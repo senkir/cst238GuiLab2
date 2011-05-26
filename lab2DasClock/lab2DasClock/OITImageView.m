@@ -16,7 +16,7 @@
 - (void)drawRect:(NSRect)rect {
     
     
-//    [self lockFocus];
+    [self lockFocus];
     
     /**
      * Apply the following transformations:
@@ -28,16 +28,19 @@
      *   so that it appears in the right place.
      */
     NSAffineTransform *rotateTF = [NSAffineTransform transform];
-//    NSPoint centerPoint = NSMakePoint(self.size.width / 2, self.image.height / 2);
     
-//    [rotateTF translateXBy: centerPoint.x yBy: centerPoint.y];
+    NSSize mySize = [[self image] size];
+    NSPoint centerPoint = NSMakePoint(90, 100);
+    
+    [rotateTF translateXBy: centerPoint.x yBy: centerPoint.y];
     [rotateTF rotateByDegrees:self.rotationInDegrees];
-//    [rotateTF translateXBy: -centerPoint.y yBy: -centerPoint.x];
+    [rotateTF translateXBy: -centerPoint.y yBy: -centerPoint.x];
     [rotateTF concat];
     
-//    [self unlockFocus];
     
     [super drawRect:rect];
+    [self unlockFocus];
+
 }
 
 //- (void)setRotationInDegrees:(float)rotationInDegrees {

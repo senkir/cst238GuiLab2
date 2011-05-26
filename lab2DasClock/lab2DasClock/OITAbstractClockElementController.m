@@ -35,10 +35,7 @@
  */
 - (void)setValue:(NSUInteger)value {
     if (_value  != value) {
-        if ( value > _maxValue ) {
-            _value = round(value / _maxValue);
-        }
-        _value = value;
+        _value = round(value % _maxValue);
     }
     [self updateDisplay];
 }

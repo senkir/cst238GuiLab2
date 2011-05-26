@@ -9,12 +9,14 @@
 #import "OITClockController.h"
 #import "OITClockAnalogHand.h"
 
+@class OITImageView;
+
 @interface OITAnalogClockController : OITClockController {
 @private
     NSImageView *_clockBody;
-    NSImageView *_secondsHand;
-    NSImageView *_minutesHand;
-    NSImageView *_hoursHand;
+    OITImageView *_secondsHand;
+    OITImageView *_minutesHand;
+    OITImageView *_hoursHand;
     
     OITClockAnalogHand *_secondsHandController;
     OITClockAnalogHand *_minutesHandController;

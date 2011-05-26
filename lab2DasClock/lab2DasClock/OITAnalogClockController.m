@@ -52,24 +52,28 @@
     NSLog(@"OITAnalogClockController: setting up the clock display.");
     NSImage* clockImage = [NSImage imageNamed:kClockBackgroundFile];
     [_clockBody setImage:clockImage];
-    
+    NSRect bodyRect = [_clockBody frame];
+    float originX = bodyRect.origin.x;
+    float originY = bodyRect.origin.y;
     //hours
     NSImage* hoursImage = [NSImage imageNamed:kClockHourHandFile];
-    _hoursHand = [[OITImageView alloc] initWithFrame:[_clockBody frame]];
+    NSRect hoursRect = NSMakeRect(originX + 10, originY - 10, bodyRect.size.width, bodyRect.size.height);
+    _hoursHand = [[OITImageView alloc] initWithFrame:hoursRect];
     [_hoursHand setImage:hoursImage];
     [self.view addSubview:_hoursHand];
     _hoursHandController = [[OITClockAnalogHand alloc] initWithImageView:_hoursHand];
     
     //minutes
     NSImage* minutesImage = [NSImage imageNamed:kClockMinuteHandFile];
-    _minutesHand = [[OITImageView alloc] initWithFrame:[_clockBody frame]];
+    NSRect minutesRect = NSMakeRect(originX + 12, originY - 15, bodyRect.size.width, bodyRect.size.height);
+    _minutesHand = [[OITImageView alloc] initWithFrame:minutesRect];
     [_minutesHand setImage:minutesImage];
     [self.view addSubview:_minutesHand];
     _minutesHandController = [[OITClockAnalogHand alloc] initWithImageView:_minutesHand];
-    
     //seconds
     NSImage* secondsImage = [NSImage imageNamed:kClockSecondHandFile];
-    _secondsHand = [[OITImageView alloc] initWithFrame:[_clockBody frame]];
+    NSRect secondsRect = NSMakeRect(originX + 10, originY - 15, bodyRect.size.width, bodyRect.size.height);
+    _secondsHand = [[OITImageView alloc] initWithFrame:secondsRect];
     [_secondsHand setImage:secondsImage];
     [self.view addSubview:_secondsHand];
     _secondsHandController =  [[OITClockAnalogHand alloc] initWithImageView:_secondsHand];
@@ -106,15 +110,15 @@
     [_hoursHandController setMaxValue:12];
     [_hoursHandController setValue:hourComponent];
     NSUInteger minuteComponent = [timeComponents minute];
-    [(OITImageView*)[_hoursHandController image] setRotationInDegrees:hourComponent];
+//    [(OITImageView*)[_hoursHandController image] setRotationInDegrees:hourComponent];
     [_minutesHandController setValue:minuteComponent];
-    [(OITImageView*)[_minutesHandController image] setRotationInDegrees:minuteComponent];
+//    [(OITImageView*)[_minutesHandController image] setRotationInDegrees:minuteComponent];
     NSUInteger secondComponent = [timeComponents second];
     [_secondsHandController setValue:secondComponent];
-    [(OITImageView*)[_secondsHandController image] setRotationInDegrees:secondComponent];
-    [[_hoursHandController image] setNeedsDisplay:true];
-    [[_minutesHandController image] setNeedsDisplay:true];
-    [[_secondsHandController image] setNeedsDisplay:true];
+//    [(OITImageView*)[_secondsHandController image] setRotationInDegrees:secondComponent];
+//    [[_hoursHandController image] setNeedsDisplay:true];
+//    [[_minutesHandController image] setNeedsDisplay:true];
+//    [[_secondsHandController image] setNeedsDisplay:true];
 //    [self relinkAllImages];
     
     NSLog(@"OITDigitalClockController: time set to %lu : %lu : %lu ", [_hoursHandController value], [_minutesHandController value], [_secondsHandController value]);

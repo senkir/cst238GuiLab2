@@ -12,7 +12,7 @@
 
 @implementation OITClockAnalogHand
 
-- (id)initWithImageView:(NSImageView*) imageView {
+- (id)initWithImageView:(OITImageView*) imageView {
     self = [super init];
     if (self) {
         _handImageView = [imageView retain];
@@ -42,8 +42,9 @@
 
 - (void)updateDisplay {
     //refresh the image if necessary
-//    NSUInteger degrees = round(( self.value / self.maxValue ) * 360);
-//    [self rotateByDegrees:degrees];
+    int degrees = -(int)round(( (float)self.value / self.maxValue ) * 360);
+    [_handImageView setRotationInDegrees:degrees];
+    [_handImageView setNeedsDisplay:true];
 }
 
 - (void)drawInContext {

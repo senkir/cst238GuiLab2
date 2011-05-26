@@ -7,12 +7,13 @@
 //
 
 #import "OITAbstractClockElementController.h"
+#import "OITImageView.h"
 
 @interface OITClockAnalogHand : OITAbstractClockElementController {
 @private
-    NSImageView *_handImageView;
+    OITImageView *_handImageView;
 }
-- (id)initWithImageView:(NSImageView*) imageView;
+- (id)initWithImageView:(OITImageView*) imageView;
 - (void)rotateByDegrees:(NSUInteger) degrees;
 - (NSImageView*)image;
 @end
