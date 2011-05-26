@@ -8,7 +8,6 @@
 
 #import "OITDigitalNumberSet.h"
 
-
 @implementation OITDigitalNumberSet
 
 @synthesize value = _value;

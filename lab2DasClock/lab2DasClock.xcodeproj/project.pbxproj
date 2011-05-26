@@ -32,6 +32,9 @@
 		4EE4A7E3138CF5C300A228ED /* OITAnalogClockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4A7E1138CF5C300A228ED /* OITAnalogClockController.m */; };
 		4EE4A7E4138CF5C300A228ED /* OITAnalogClockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4A7E2138CF5C300A228ED /* OITAnalogClockController.xib */; };
 		4EE4A7E6138CFD1E00A228ED /* clock_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4A7E5138CFD1E00A228ED /* clock_bg.png */; };
+		4EE9A9B4138E013D00B8D354 /* NSAffineTransform+util.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9A9B3138E013D00B8D354 /* NSAffineTransform+util.m */; };
+		4EE9A9B8138E031700B8D354 /* OITImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9A9B7138E031700B8D354 /* OITImageHelper.m */; };
+		4EE9A9BC138E0DE300B8D354 /* OITImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9A9BB138E0DE300B8D354 /* OITImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,12 @@
 		4EE4A7E1138CF5C300A228ED /* OITAnalogClockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITAnalogClockController.m; sourceTree = "<group>"; };
 		4EE4A7E2138CF5C300A228ED /* OITAnalogClockController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OITAnalogClockController.xib; sourceTree = "<group>"; };
 		4EE4A7E5138CFD1E00A228ED /* clock_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_bg.png; sourceTree = "<group>"; };
+		4EE9A9B2138E013D00B8D354 /* NSAffineTransform+util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAffineTransform+util.h"; sourceTree = "<group>"; };
+		4EE9A9B3138E013D00B8D354 /* NSAffineTransform+util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAffineTransform+util.m"; sourceTree = "<group>"; };
+		4EE9A9B6138E031700B8D354 /* OITImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITImageHelper.h; sourceTree = "<group>"; };
+		4EE9A9B7138E031700B8D354 /* OITImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITImageHelper.m; sourceTree = "<group>"; };
+		4EE9A9BA138E0DE200B8D354 /* OITImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITImageView.h; sourceTree = "<group>"; };
+		4EE9A9BB138E0DE300B8D354 /* OITImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +119,7 @@
 				4E8A905C13820E3A0085C6E5 /* View */,
 				4E8A905B13820E330085C6E5 /* Controller */,
 				4E8A905A13820E280085C6E5 /* Model */,
+				4EE9A9B9138E031F00B8D354 /* Categories */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -121,6 +131,8 @@
 				4E566E0C138389D100451F6F /* OITComboBoxDataSource.m */,
 				4E566E221383945F00451F6F /* OITTimeModel.h */,
 				4E566E231383945F00451F6F /* OITTimeModel.m */,
+				4EE9A9B6138E031700B8D354 /* OITImageHelper.h */,
+				4EE9A9B7138E031700B8D354 /* OITImageHelper.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -139,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				4EB9291613804963005486B1 /* MainMenu.xib */,
+				4EE9A9BA138E0DE200B8D354 /* OITImageView.h */,
+				4EE9A9BB138E0DE300B8D354 /* OITImageView.m */,
 				4E8A9062138213500085C6E5 /* OITRootViewController.xib */,
 				4E566E141383912F00451F6F /* OITSevenSegmentDigitController.xib */,
 				4E566E1E1383927F00451F6F /* OITClockController.xib */,
@@ -235,6 +249,15 @@
 			name = AnalogControllers;
 			sourceTree = "<group>";
 		};
+		4EE9A9B9138E031F00B8D354 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4EE9A9B2138E013D00B8D354 /* NSAffineTransform+util.h */,
+				4EE9A9B3138E013D00B8D354 /* NSAffineTransform+util.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -316,6 +339,9 @@
 				4EE4A7E3138CF5C300A228ED /* OITAnalogClockController.m in Sources */,
 				4E464C33138D707200DBC9AA /* OITClockAnalogHand.m in Sources */,
 				4E464C37138D716A00DBC9AA /* OITAbstractClockElementController.m in Sources */,
+				4EE9A9B4138E013D00B8D354 /* NSAffineTransform+util.m in Sources */,
+				4EE9A9B8138E031700B8D354 /* OITImageHelper.m in Sources */,
+				4EE9A9BC138E0DE300B8D354 /* OITImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
