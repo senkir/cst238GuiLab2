@@ -55,11 +55,10 @@
 
 - (void)setValue:(NSUInteger)value {
     if ( value != _value ) {
-        if (value > _maxValue) value = _maxValue;
-        _value = value;
-        NSUInteger tensDigit = round(value / 10);
+        _value = value % _maxValue;
+        NSUInteger tensDigit = round(_value / 10);
         [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:0] setValue:tensDigit];
-        NSUInteger onesDigit = value % 10;
+        NSUInteger onesDigit = _value % 10;
         [(OITSevenSegmentDigitController*)[_digitControllerArray objectAtIndex:1] setValue:onesDigit];
     }
 }
